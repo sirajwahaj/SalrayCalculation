@@ -67,6 +67,25 @@ def max_number(sequens):
     return mx_number
 
 
+def compare_reverse_list(list1, list2):
+    return list1 == list2[-1::-1]
+
+
+def FizzBuzz(number1):
+    for number in range(1, number1+1):
+        output = ""
+        if number % 3 == 0:
+            output += "Fizz"
+        if number % 5 == 0:
+            output += "Buzz"
+        print(output or number)
+
+
+def string_to_litter(word):
+    for i in word[::2]:
+        print(i)
+
+
 match int(input("Select the function you want to try: ")):
     case 1:
         first_elements_of_nasted_list()
@@ -85,3 +104,9 @@ match int(input("Select the function you want to try: ")):
         print(repeated_number3([12, 29, 12, 90, 23, 12]))
     case 5:
         print(max_number([2, 45, 1, 892, 23, 22, 222, 33, float('-inf')]))
+    case 6:
+        print(compare_reverse_list([2, 3, 4], [4, 3, 2]))
+    case 7:
+        FizzBuzz(int(input("Enter a number:  ")))
+    case 8:
+        string_to_litter(input("Enter a string:  "))
