@@ -1,3 +1,6 @@
+import readable_dict as readable_dic
+
+
 def rovarsprok(word):
     consonat = "bcdfghjklmnpqrstvwxyz"
     rovsentence = ""
@@ -15,14 +18,6 @@ def count_letters(sentence):
     for letter in sentence.lower():
         letter_dict[letter] = letter_dict.get(letter, 0) + 1
     readable_dic(letter_dict)
-
-
-def readable_dic(dictionary):
-    max_key_length = max(len(str(key)) for key in dictionary.keys())
-
-    for key, value in dictionary.items():
-        padding = " " * (max_key_length - len(str(key)))
-        print(f"{key}:{padding}{value}")
 
 
 def count_word(text):
